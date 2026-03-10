@@ -1,0 +1,80 @@
+# Teste de QA - Plataforma de Cursos
+
+## Objetivo da aplicação
+
+A aplicação tem como objetivo permitir o cadastro e listagem de cursos através de um formulário simples.
+
+
+
+## Fluxos principais identificados
+
+Durante a análise da aplicação foram identificados os seguintes fluxos principais:
+
+- Listagem de cursos
+- Cadastro de cursos
+- Visualização de cursos cadastrados
+
+
+
+## Pontos críticos para teste
+
+Os principais pontos críticos identificados foram:
+
+- Validação de campos obrigatórios
+- Organização da listagem de cursos
+- Integridade dos dados cadastrados
+- Segurança da aplicação
+- Funcionalidade de exclusão
+
+
+
+## Casos de teste
+
+Os casos de teste e cenários estão documentados na planilha:
+
+Link dos casos de testes:https://docs.google.com/spreadsheets/d/1i9RveFInS2S9jaxIaiGF5tCnq4jexdhQLpUNB-oJjog/edit?usp=sharing
+
+
+
+## Execução dos testes
+
+Os testes foram executados manualmente com base nos cenários definidos.
+
+Foram realizados testes de:
+
+- validação de campos
+- fluxo da aplicação
+- comportamento da interface
+- segurança básica de entrada de dados
+
+Segui princípios básicos de testes exploratórios para identificar possíveis falhas na aplicação. Inicialmente utilizei a plataforma simulando o comportamento de um usuário comum, navegando entre as funcionalidades disponíveis e avaliando a experiência geral do sistema.
+Logo no início da análise foi possível perceber que não existia nenhum tipo de moderação ou validação de conteúdo no cadastro de cursos. Para validar essa hipótese, realizei testes inserindo conteúdos inadequados, como temas relacionados a drogas, e o sistema permitiu o cadastro sem qualquer tipo de bloqueio ou validação.
+A partir dessa observação.
+
+
+
+## Evidências
+
+As evidências dos testes realizados estão disponíveis em:
+
+Execução de script (XSS)
+Link da evidência:https://drive.google.com/file/d/1TTNjb9JjMoG25VsijDs6c_MdOYqF8Her/view?usp=sharing
+
+Erro 404 ao recarregar página
+Link da evidência:https://drive.google.com/file/d/1z_8KlIfC0NqxGteQFc-siytsk6MLEeaV/view?usp=sharing
+
+Teste mostrando erros mais destacados
+Link de evidência:https://drive.google.com/file/d/1_vmfHgiukjzpnq_CxbOquwjOrEjKzhft/view?usp=sharing
+
+## Bugs encontrados
+
+Durante os testes foram encontrados diversos problemas, incluindo:
+
+- cadastro de cursos com campos vazios
+- layout desorganizado na listagem
+- falha nas funções de editar e excluir
+- ausência de validação de dados
+- possibilidade de números negativos em vagas
+- vulnerabilidade XSS ao inserir `<script>alert(1)</script>`
+
+Todos os bugs estão documentados na planilha de testes.
